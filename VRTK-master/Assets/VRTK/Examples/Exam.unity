@@ -2633,9 +2633,8 @@ MonoBehaviour:
   set1: 0
   set2: 0
   set3: 0
-  set4: 0
+  set4: 1
   set5: 0
-  timer: 150
 --- !u!114 &195756965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6402,12 +6401,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textfill: 
   spider: 0
-  set1: 0
+  set1: 1
   set2: 0
   set3: 0
   set4: 0
   set5: 0
-  timer: 150
 --- !u!114 &569181917
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14675,10 +14673,9 @@ MonoBehaviour:
   spider: 0
   set1: 0
   set2: 0
-  set3: 0
+  set3: 1
   set4: 0
   set5: 0
-  timer: 150
 --- !u!114 &1305869664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15322,7 +15319,6 @@ MonoBehaviour:
   set3: 0
   set4: 0
   set5: 0
-  timer: 150
 --- !u!1 &1347263012
 GameObject:
   m_ObjectHideFlags: 0
@@ -20717,11 +20713,10 @@ MonoBehaviour:
   textfill: 
   spider: 0
   set1: 0
-  set2: 0
+  set2: 1
   set3: 0
   set4: 0
   set5: 0
-  timer: 150
 --- !u!114 &1833462072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30186,8 +30181,7 @@ MonoBehaviour:
   set2: 0
   set3: 0
   set4: 0
-  set5: 0
-  timer: 150
+  set5: 1
 --- !u!114 &2096833630
 MonoBehaviour:
   m_ObjectHideFlags: 0
