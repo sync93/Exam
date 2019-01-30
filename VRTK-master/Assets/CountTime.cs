@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class CountTime : MonoBehaviour {
 
     public float timer = 90f;
-    private float time;
+   // private float time;
     public Text timerSecond;
     private Image fillImg;
 
@@ -16,7 +16,7 @@ public class CountTime : MonoBehaviour {
     {
 
       //  fillImg = this.GetComponent<Image>();
-        time = timer;
+     //   time = timer;
     }
 
     // Update is called once per frame

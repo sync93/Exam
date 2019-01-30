@@ -9,7 +9,7 @@ public class Enemy : MonoBehaviour {
     public AudioClip deathSound;
     Animator anim;
     AudioSource enemyAudio;
-
+    public float timer = 150f;
 
     private void Awake()
     {
@@ -17,16 +17,37 @@ public class Enemy : MonoBehaviour {
         enemyAudio = GetComponent<AudioSource>();
     }
 
-
-
-    void OnCollisionEnter(Collision other)
+    void Update()
+    {
+        timer -= Time.deltaTime;
+    }
+        void OnCollisionEnter(Collision other)
     {
 
         if (other.gameObject.tag == "Bullet")
         {
             Debug.Log("Hit");
-        ScoreManager.score += scoreValue;
-        
+            if (timer < 150 && timer > 120)
+            {
+                ScoreManager.score1 += scoreValue;
+            }
+            if (timer < 120 && timer>90) {
+                ScoreManager.score2 += scoreValue;
+            }
+            if (timer < 90 && timer > 60)
+            {
+                ScoreManager.score3 += scoreValue;
+            }
+            if (timer < 60 && timer > 30)
+            {
+                ScoreManager.score4 += scoreValue;
+            }
+            if (timer < 30 && timer > 0)
+            {
+                ScoreManager.score5 += scoreValue;
+            }
+            //ScoreManager.score += scoreValue;
+
             Death();
             spw.count--;
         }
