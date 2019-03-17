@@ -25,9 +25,14 @@ public class WaveSpawner : MonoBehaviour
     public int positionNumber = 0;
     public Transform[] spawnLocation;
 
+    AudioSource enemyAudio;
+
+    public AudioClip SpwnSound;
 
     void Start() {
         waveCountdown = timeBetweenWaves;
+
+        enemyAudio = GetComponent<AudioSource>();
     }
     void Update() {
         if (state == SpawnState.WAITING) {
@@ -88,12 +93,13 @@ public class WaveSpawner : MonoBehaviour
     }
     void SpawnEnemy(Transform _enemy) {
         //spawn enemy
-        Instantiate(_enemy, spawnLocation[positionNumber].transform.position, Quaternion.Euler(0, 0, 0));
+        Instantiate(_enemy, spawnLocation[positionNumber].transform.position, Quaternion.Euler(0, Random.Range(20,100), 0));
 
+        enemyAudio.PlayOneShot(SpwnSound);
         Debug.Log("Spawning Enemy: " + _enemy.name);
         ScoreManager.spawnAmount += 1;
         positionNumber++;
-        if (positionNumber >= 10)
+        if (positionNumber >= 25)
         {
             positionNumber = 0;
         }
