@@ -2207,12 +2207,36 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &424437311 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114704336731771232, guid: 8d1ca14cc1fa29b4bb278968b222ab11,
+    type: 3}
+  m_PrefabInstance: {fileID: 1244460781}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3abaf4521bf2344ea21ed3020b98eb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &428204000 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4366535953296458, guid: f0e4d4df8bc9ea14eb35b1169bc74720,
     type: 3}
   m_PrefabInstance: {fileID: 1018296629}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &432737241 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114704336731771232, guid: 8d1ca14cc1fa29b4bb278968b222ab11,
+    type: 3}
+  m_PrefabInstance: {fileID: 750892033}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3abaf4521bf2344ea21ed3020b98eb2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &471985223
 GameObject:
   m_ObjectHideFlags: 0
@@ -2285,13 +2309,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 475069352}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1922693391}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!54 &475069354
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3337,6 +3361,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: DummyGunTwo
       objectReference: {fileID: 0}
+    - target: {fileID: 114704336731771232, guid: 8d1ca14cc1fa29b4bb278968b222ab11,
+        type: 3}
+      propertyPath: holdButtonToGrab
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114704336731771232, guid: 8d1ca14cc1fa29b4bb278968b222ab11,
+        type: 3}
+      propertyPath: validDrop
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 114137974055116386, guid: 8d1ca14cc1fa29b4bb278968b222ab11,
         type: 3}
       propertyPath: sdkOverrides.Array.size
@@ -3625,11 +3659,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.0000001
       objectReference: {fileID: 0}
-    - target: {fileID: 114704336731771232, guid: 8d1ca14cc1fa29b4bb278968b222ab11,
-        type: 3}
-      propertyPath: holdButtonToGrab
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 33854560001682468, guid: 8d1ca14cc1fa29b4bb278968b222ab11, type: 3}
     - {fileID: 23504409693091908, guid: 8d1ca14cc1fa29b4bb278968b222ab11, type: 3}
@@ -3732,6 +3761,7 @@ GameObject:
   - component: {fileID: 835205882}
   - component: {fileID: 835205881}
   - component: {fileID: 835205880}
+  - component: {fileID: 835205887}
   m_Layer: 0
   m_Name: RightControllerScriptAlias
   m_TagString: Untagged
@@ -3929,6 +3959,27 @@ MonoBehaviour:
   gripSenseAxisChanged: 0
   gripSensePressed: 0
   controllerVisible: 1
+--- !u!114 &835205887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835205878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58cdac96da703d7488a11cc3bde08cbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToGrab: {fileID: 432737241}
+  objectIsPrefab: 0
+  cloneGrabbedObject: 0
+  alwaysCloneOnEnable: 0
+  attemptSecondaryGrab: 0
+  interactTouch: {fileID: 0}
+  interactGrab: {fileID: 0}
+  secondaryInteractTouch: {fileID: 0}
+  secondaryInteractGrab: {fileID: 0}
 --- !u!1 &835557456
 GameObject:
   m_ObjectHideFlags: 0
@@ -5059,7 +5110,9 @@ PrefabInstance:
     - target: {fileID: 114642603537886326, guid: 55bcebf0300be464cb5f7ef8d78bb36d,
         type: 3}
       propertyPath: m_Text
-      value: "Grab a gun and \ntry to Shoot the spider !!\n"
+      value: 'Try to Shoot the spider !
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 114642603537886326, guid: 55bcebf0300be464cb5f7ef8d78bb36d,
         type: 3}
@@ -5969,6 +6022,7 @@ GameObject:
   - component: {fileID: 1219079601}
   - component: {fileID: 1219079600}
   - component: {fileID: 1219079599}
+  - component: {fileID: 1219079606}
   m_Layer: 0
   m_Name: LeftControllerScriptAlias
   m_TagString: Untagged
@@ -6166,6 +6220,27 @@ MonoBehaviour:
   gripSenseAxisChanged: 0
   gripSensePressed: 0
   controllerVisible: 1
+--- !u!114 &1219079606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1219079597}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 58cdac96da703d7488a11cc3bde08cbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectToGrab: {fileID: 424437311}
+  objectIsPrefab: 0
+  cloneGrabbedObject: 0
+  alwaysCloneOnEnable: 0
+  attemptSecondaryGrab: 0
+  interactTouch: {fileID: 0}
+  interactGrab: {fileID: 0}
+  secondaryInteractTouch: {fileID: 0}
+  secondaryInteractGrab: {fileID: 0}
 --- !u!1 &1229247938
 GameObject:
   m_ObjectHideFlags: 0
@@ -6373,6 +6448,16 @@ PrefabInstance:
     - target: {fileID: 1523334852853474, guid: 8d1ca14cc1fa29b4bb278968b222ab11, type: 3}
       propertyPath: m_Name
       value: DummyGunOne
+      objectReference: {fileID: 0}
+    - target: {fileID: 114704336731771232, guid: 8d1ca14cc1fa29b4bb278968b222ab11,
+        type: 3}
+      propertyPath: holdButtonToGrab
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114704336731771232, guid: 8d1ca14cc1fa29b4bb278968b222ab11,
+        type: 3}
+      propertyPath: validDrop
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114137974055116386, guid: 8d1ca14cc1fa29b4bb278968b222ab11,
         type: 3}
@@ -6654,11 +6739,6 @@ PrefabInstance:
     - target: {fileID: 4284849433887702, guid: 8d1ca14cc1fa29b4bb278968b222ab11, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 114704336731771232, guid: 8d1ca14cc1fa29b4bb278968b222ab11,
-        type: 3}
-      propertyPath: holdButtonToGrab
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114903645856747160, guid: 8d1ca14cc1fa29b4bb278968b222ab11,
         type: 3}
@@ -10512,13 +10592,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1972594330}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1363149545}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
 --- !u!54 &1972594332
 Rigidbody:
   m_ObjectHideFlags: 0
